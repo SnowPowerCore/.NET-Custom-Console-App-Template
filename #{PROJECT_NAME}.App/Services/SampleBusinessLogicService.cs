@@ -1,6 +1,11 @@
 ﻿using MinimalStepifiedSystem.Attributes;
+using #{PROJECT_DEFAULT_NAMESPACE}.App.Constants;
+using #{PROJECT_DEFAULT_NAMESPACE}.App.Context;
+using #{PROJECT_DEFAULT_NAMESPACE}.App.Delegates;
+using #{PROJECT_DEFAULT_NAMESPACE}.App.Interfaces;
+using #{PROJECT_DEFAULT_NAMESPACE}.App.Steps.CustomBusinessLogic;
 
-namespace #{PROJECT_DEFAULT_NAMESPACE};
+namespace #{PROJECT_DEFAULT_NAMESPACE}.App.Services;
 
 public class SampleBusinessLogicService : ISampleBusinessLogicService
 {

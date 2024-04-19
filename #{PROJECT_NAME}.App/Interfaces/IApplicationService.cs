@@ -1,6 +1,6 @@
 ﻿using Microsoft.ApplicationInsights;
 
-namespace #{PROJECT_DEFAULT_NAMESPACE};
+namespace #{PROJECT_DEFAULT_NAMESPACE}.App.Interfaces;
 
 public interface IApplicationService
 {

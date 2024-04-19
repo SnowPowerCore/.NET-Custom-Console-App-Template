@@ -1,4 +1,6 @@
-﻿namespace #{PROJECT_DEFAULT_NAMESPACE};
+﻿using #{PROJECT_DEFAULT_NAMESPACE}.App.Interfaces;
+
+namespace #{PROJECT_DEFAULT_NAMESPACE}.App.Interceptor.HttpClient;
 
 /// <summary>
 /// Intercept all of the sending HTTP requests on a client side Blazor application.

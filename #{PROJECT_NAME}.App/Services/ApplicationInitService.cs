@@ -1,7 +1,10 @@
 ﻿using MinimalStepifiedSystem.Attributes;
-using #{PROJECT_DEFAULT_NAMESPACE}.Steps.Launch.EveryTime;
+using #{PROJECT_DEFAULT_NAMESPACE}.App.Context;
+using #{PROJECT_DEFAULT_NAMESPACE}.App.Delegates;
+using #{PROJECT_DEFAULT_NAMESPACE}.App.Interfaces;
+using #{PROJECT_DEFAULT_NAMESPACE}.App.Steps.Launch.EveryTime;
 
-namespace #{PROJECT_DEFAULT_NAMESPACE};
+namespace #{PROJECT_DEFAULT_NAMESPACE}.App.Services;
 
 public class ApplicationInitService : IApplicationInitService
 {

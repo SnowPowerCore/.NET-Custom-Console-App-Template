@@ -1,4 +1,4 @@
-﻿namespace #{PROJECT_DEFAULT_NAMESPACE};
+﻿namespace #{PROJECT_DEFAULT_NAMESPACE}.App.Models;
 
 public class ScreenCommand(Func<Task> execute,
                            string description = "A command without description.",

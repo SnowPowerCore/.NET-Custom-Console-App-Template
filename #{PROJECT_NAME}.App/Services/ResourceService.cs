@@ -2,8 +2,10 @@
 using System.Text.Json;
 using Microsoft.Extensions.Options;
 using MinimalStepifiedSystem.Utils;
+using #{PROJECT_DEFAULT_NAMESPACE}.App.Interfaces;
+using #{PROJECT_DEFAULT_NAMESPACE}.App.Models;
 
-namespace #{PROJECT_DEFAULT_NAMESPACE};
+namespace #{PROJECT_DEFAULT_NAMESPACE}.App.Services;
 
 public class ResourceService : IResourceService
 {

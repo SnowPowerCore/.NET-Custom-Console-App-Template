@@ -1,6 +1,6 @@
 ﻿using MinimalStepifiedSystem.Utils;
 
-namespace #{PROJECT_DEFAULT_NAMESPACE};
+namespace #{PROJECT_DEFAULT_NAMESPACE}.App.Interfaces;
 
 public interface INavigationService
 {

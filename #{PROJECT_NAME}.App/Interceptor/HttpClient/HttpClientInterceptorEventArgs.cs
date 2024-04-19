@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Net.Http.Headers;
 
-namespace #{PROJECT_DEFAULT_NAMESPACE};
+namespace #{PROJECT_DEFAULT_NAMESPACE}.App.Interceptor.HttpClient;
 
 /// <summary>
 /// Provides data for the event that is raised when before or after sending HTTP request.

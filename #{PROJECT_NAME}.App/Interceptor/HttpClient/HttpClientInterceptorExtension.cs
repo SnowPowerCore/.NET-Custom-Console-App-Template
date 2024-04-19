@@ -2,8 +2,9 @@
 using System.Reflection;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
+using #{PROJECT_DEFAULT_NAMESPACE}.App.Interfaces;
 
-namespace #{PROJECT_DEFAULT_NAMESPACE};
+namespace #{PROJECT_DEFAULT_NAMESPACE}.App.Interceptor.HttpClient;
 
 /// <summary>
 /// Extension methods for adding and using HttpClientInterceptor.

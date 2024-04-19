@@ -1,4 +1,6 @@
-﻿namespace #{PROJECT_DEFAULT_NAMESPACE};
+﻿using #{PROJECT_DEFAULT_NAMESPACE}.App.Interceptor.HttpClient;
+
+namespace #{PROJECT_DEFAULT_NAMESPACE}.App.Interfaces;
 
 public interface IHttpClientInterceptor
 {

@@ -1,6 +1,10 @@
 ﻿using MinimalStepifiedSystem.Interfaces;
+using #{PROJECT_DEFAULT_NAMESPACE}.App.Context;
+using #{PROJECT_DEFAULT_NAMESPACE}.App.Delegates;
+using #{PROJECT_DEFAULT_NAMESPACE}.App.Interceptor.HttpClient;
+using #{PROJECT_DEFAULT_NAMESPACE}.App.Interfaces;
 
-namespace #{PROJECT_DEFAULT_NAMESPACE}.Steps.Launch.EveryTime;
+namespace #{PROJECT_DEFAULT_NAMESPACE}.App.Steps.Launch.EveryTime;
 
 public class SampleInterceptHttpClientWithHeaderStep : IStep<LaunchDelegate, LaunchContext>
 {

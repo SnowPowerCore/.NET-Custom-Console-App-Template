@@ -1,6 +1,7 @@
-﻿using System.Diagnostics.CodeAnalysis;
+﻿using #{PROJECT_DEFAULT_NAMESPACE}.App.Interfaces;
+using System.Diagnostics.CodeAnalysis;
 
-namespace #{PROJECT_DEFAULT_NAMESPACE};
+namespace #{PROJECT_DEFAULT_NAMESPACE}.App.Services;
 
 public class LocalStorageService(Hanssens.Net.ILocalStorage localStorageImpl) : ILocalStorageService
 {

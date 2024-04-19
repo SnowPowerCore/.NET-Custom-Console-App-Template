@@ -1,6 +1,10 @@
 ﻿using MinimalStepifiedSystem.Interfaces;
+using #{PROJECT_DEFAULT_NAMESPACE}.App.Constants;
+using #{PROJECT_DEFAULT_NAMESPACE}.App.Context;
+using #{PROJECT_DEFAULT_NAMESPACE}.App.Delegates;
+using #{PROJECT_DEFAULT_NAMESPACE}.App.Interfaces;
 
-namespace #{PROJECT_DEFAULT_NAMESPACE};
+namespace #{PROJECT_DEFAULT_NAMESPACE}.App.Steps.CustomBusinessLogic;
 
 public class RetrieveDataStep(IApplicationService application,
                               ISampleApi sampleApi) : IStep<SampleBusinessLogicDelegate, SampleBusinessLogicContext>

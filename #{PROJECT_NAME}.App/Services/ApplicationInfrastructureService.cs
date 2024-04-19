@@ -1,4 +1,6 @@
-﻿namespace #{PROJECT_DEFAULT_NAMESPACE};
+﻿using #{PROJECT_DEFAULT_NAMESPACE}.App.Interfaces;
+
+namespace #{PROJECT_DEFAULT_NAMESPACE}.App.Services;
 
 public class ApplicationInfrastructureService(INavigationService navigation,
                                               IConsoleService console,

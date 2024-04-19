@@ -1,6 +1,6 @@
 ﻿using MinimalStepifiedSystem.Utils;
 
-namespace #{PROJECT_DEFAULT_NAMESPACE};
+namespace #{PROJECT_DEFAULT_NAMESPACE}.App.Models;
 
 public class ResourceSettings
 {

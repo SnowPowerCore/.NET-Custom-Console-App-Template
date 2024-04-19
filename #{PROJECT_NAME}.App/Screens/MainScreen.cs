@@ -1,4 +1,7 @@
-﻿namespace #{PROJECT_DEFAULT_NAMESPACE};
+﻿using #{PROJECT_DEFAULT_NAMESPACE}.App.Interfaces;
+using #{PROJECT_DEFAULT_NAMESPACE}.App.Models;
+
+namespace #{PROJECT_DEFAULT_NAMESPACE}.App.Screens;
 
 public class MainScreen : ScreenBase
 {

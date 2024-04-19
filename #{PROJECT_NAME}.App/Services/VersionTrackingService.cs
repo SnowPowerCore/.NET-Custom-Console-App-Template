@@ -1,8 +1,8 @@
 ﻿using System.Text;
-
 using MinimalStepifiedSystem.Utils;
+using #{PROJECT_DEFAULT_NAMESPACE}.App.Interfaces;
 
-namespace #{PROJECT_DEFAULT_NAMESPACE};
+namespace #{PROJECT_DEFAULT_NAMESPACE}.App.Services;
 
 public class VersionTrackingService : IVersionTrackingService
 {

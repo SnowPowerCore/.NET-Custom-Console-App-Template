@@ -9,8 +9,14 @@ using Polly;
 using Polly.Extensions.Http;
 using Polly.Timeout;
 using Refit;
-using #{PROJECT_DEFAULT_NAMESPACE};
-using #{PROJECT_DEFAULT_NAMESPACE}.Steps.Launch.EveryTime;
+using #{PROJECT_DEFAULT_NAMESPACE}.App;
+using #{PROJECT_DEFAULT_NAMESPACE}.App.Interceptor.HttpClient;
+using #{PROJECT_DEFAULT_NAMESPACE}.App.Interfaces;
+using #{PROJECT_DEFAULT_NAMESPACE}.App.Models;
+using #{PROJECT_DEFAULT_NAMESPACE}.App.Screens;
+using #{PROJECT_DEFAULT_NAMESPACE}.App.Services;
+using #{PROJECT_DEFAULT_NAMESPACE}.App.Steps.CustomBusinessLogic;
+using #{PROJECT_DEFAULT_NAMESPACE}.App.Steps.Launch.EveryTime;
 
 var builder = Host.CreateApplicationBuilder(args);
 

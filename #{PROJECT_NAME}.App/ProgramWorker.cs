@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.Hosting;
+using #{PROJECT_DEFAULT_NAMESPACE}.App.Interfaces;
 
-namespace #{PROJECT_DEFAULT_NAMESPACE};
+namespace #{PROJECT_DEFAULT_NAMESPACE}.App;
 
 public class ProgramWorker(IHostApplicationLifetime lifetime,
                            IApplicationInitService applicationInit) : BackgroundService

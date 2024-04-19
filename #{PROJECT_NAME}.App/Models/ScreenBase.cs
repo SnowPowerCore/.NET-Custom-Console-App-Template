@@ -1,6 +1,8 @@
 ﻿using MinimalStepifiedSystem.Utils;
+using #{PROJECT_DEFAULT_NAMESPACE}.App.Constants;
+using #{PROJECT_DEFAULT_NAMESPACE}.App.Interfaces;
 
-namespace #{PROJECT_DEFAULT_NAMESPACE};
+namespace #{PROJECT_DEFAULT_NAMESPACE}.App.Models;
 
 public class ScreenBase : IScreen
 {

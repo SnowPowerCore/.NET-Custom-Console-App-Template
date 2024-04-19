@@ -1,7 +1,7 @@
 ﻿using System.Net;
 using System.Reflection;
 
-namespace #{PROJECT_DEFAULT_NAMESPACE};
+namespace #{PROJECT_DEFAULT_NAMESPACE}.App.Interceptor.HttpClient;
 
 internal class HttpClientInterceptorHandler : HttpMessageHandler
 {
