@@ -77,8 +77,8 @@ builder.Services.AddSingleton(sp => new RetrieveDataStep(sp.GetRequiredService<I
     sp.GetRequiredService<ISampleApi>()));
 
 builder.Services.AddSingleton(sp => new ScreenBase(sp.GetRequiredService<IApplicationService>()));
-builder.Services.AddSingleton(sp => new MainScreen(sp.GetRequiredService<IServiceProvider>(),
-    sp.GetRequiredService<IApplicationService>(), sp.GetRequiredService<ISampleBusinessLogicService>()));
+builder.Services.AddSingleton(sp => new MainScreen(sp.GetRequiredService<IApplicationService>(),
+    sp.GetRequiredService<ISampleBusinessLogicService>()));
 
 builder.Services.Configure<ResourceSettings>(rs =>
 {

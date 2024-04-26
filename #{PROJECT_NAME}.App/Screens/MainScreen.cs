@@ -7,8 +7,7 @@ public class MainScreen : ScreenBase
 {
     private readonly ISampleBusinessLogicService _sampleBusinessLogic;
 
-    public MainScreen(IServiceProvider _,
-                      IApplicationService application,
+    public MainScreen(IApplicationService application,
                       ISampleBusinessLogicService sampleBusinessLogic) : base(application)
     {
         _sampleBusinessLogic = sampleBusinessLogic;
