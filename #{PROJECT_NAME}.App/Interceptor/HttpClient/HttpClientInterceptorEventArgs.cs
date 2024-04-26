@@ -1,5 +1,4 @@
-﻿using System.ComponentModel;
-using System.Net.Http.Headers;
+﻿using System.Net.Http.Headers;
 
 namespace #{PROJECT_DEFAULT_NAMESPACE}.App.Interceptor.HttpClient;
 
@@ -38,22 +37,10 @@ public class HttpClientInterceptorEventArgs : EventArgs
     public bool Cancel { get; set; }
 
     /// <summary>
-    /// Provides data for the event that is raised when before or after sending HTTP request.
-    /// </summary>
-    /// <param name="request">Request</param>
-    /// <param name="response">Response</param>
-    [Obsolete, EditorBrowsable(EditorBrowsableState.Never)]
-    public HttpClientInterceptorEventArgs(HttpRequestMessage request, HttpResponseMessage response) : this(request, response, exception: null)
-    {
-    }
-
-    /// <summary>
     /// Provides data for the event that is raised when before sending HTTP request.
     /// </summary>
     /// <param name="request">Request</param>
-    public HttpClientInterceptorEventArgs(HttpRequestMessage request) : this(request, response: null, exception: null)
-    {
-    }
+    public HttpClientInterceptorEventArgs(HttpRequestMessage request) : this(request, response: null, exception: null) { }
 
     /// <summary>
     /// Provides data for the event that is raised when after sending HTTP request.

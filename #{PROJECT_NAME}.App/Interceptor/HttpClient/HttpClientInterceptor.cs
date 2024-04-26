@@ -27,9 +27,7 @@ public class HttpClientInterceptor : IHttpClientInterceptor
     /// </summary>
     public event HttpClientInterceptorEventHandler AfterSendAsync;
 
-    internal HttpClientInterceptor()
-    {
-    }
+    internal HttpClientInterceptor() { }
 
     internal async Task InvokeBeforeSendAsync(HttpClientInterceptorEventArgs args)
     {

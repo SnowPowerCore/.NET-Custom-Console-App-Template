@@ -21,8 +21,8 @@ public class NavigationService(IOptions<KnownScreens> knownScreens,
     {
         var screenType = knownScreens.Value.KnownScreenTypes[screenName];
         var screen = (IScreen)serviceProvider.GetRequiredService(screenType);
-        screen.OnScreenAppearing(additionalData);
-        await screen.InitAsync();
+        await screen.OnScreenAppearingAsync(additionalData);
+        await screen.InitScreenAsync();
         _screenStack.Add(screen);
     }
 
@@ -32,14 +32,14 @@ public class NavigationService(IOptions<KnownScreens> knownScreens,
         if (lastScreen is default(IScreen))
             return;
 
-        lastScreen.OnScreenDisappearing();
+        await lastScreen.OnScreenDisappearingAsync();
         _screenStack.Remove(lastScreen);
 
         var newLastScreen = _screenStack.LastOrDefault();
         if (newLastScreen is default(IScreen))
             return;
 
-        newLastScreen.OnScreenAppearing();
-        await newLastScreen.InitAsync();
+        await newLastScreen.OnScreenAppearingAsync();
+        await newLastScreen.InitScreenAsync();
     }
 }

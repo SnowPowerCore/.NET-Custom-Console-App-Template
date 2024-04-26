@@ -4,9 +4,9 @@ namespace #{PROJECT_DEFAULT_NAMESPACE}.App.Interfaces;
 
 public interface IScreen
 {
-    Task InitAsync();
+    Task InitScreenAsync();
 
-    void OnScreenAppearing(DictionaryWithDefault<string, object>? args = null);
+    Task OnScreenAppearingAsync(DictionaryWithDefault<string, object>? args = null);
 
-    void OnScreenDisappearing();
+    Task OnScreenDisappearingAsync();
 }

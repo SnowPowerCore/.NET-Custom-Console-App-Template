@@ -25,16 +25,21 @@ public class ScreenBase : IScreen
         Application = application;
     }
 
-    public virtual async Task InitAsync()
+    public async Task InitScreenAsync()
     {
-        Application.Infrastructure.Console.PrintLine(WelcomeMessage);
+        if (!string.IsNullOrEmpty(WelcomeMessage))
+            Application.Infrastructure.Console.PrintLine(WelcomeMessage);
+
+        await InitAsync();
 
         await ReturnToWaitForCommandInputAsync();
     }
 
+    protected virtual async Task InitAsync() { }
+
     protected virtual async Task HelpAsync()
     {
-        OnScreenAppearing();
+        await OnScreenAppearingAsync();
         PrintCommands();
     }
 
@@ -42,7 +47,7 @@ public class ScreenBase : IScreen
 
     private async Task AskAgainAsync()
     {
-        OnScreenAppearing();
+        await OnScreenAppearingAsync();
     }
 
     private async Task ReturnToWaitForCommandInputAsync()
@@ -58,7 +63,7 @@ public class ScreenBase : IScreen
         _ = ReturnToWaitForCommandInputAsync();
     }
 
-    public virtual void OnScreenAppearing(DictionaryWithDefault<string, object>? args = null)
+    public virtual async Task OnScreenAppearingAsync(DictionaryWithDefault<string, object>? args = null)
     {
         if (args is not default(DictionaryWithDefault<string, object>))
             CurrentArguments = args;
@@ -66,7 +71,7 @@ public class ScreenBase : IScreen
         Application.Infrastructure.Console.New();
     }
 
-    public virtual void OnScreenDisappearing() { }
+    public virtual async Task OnScreenDisappearingAsync() { }
 
     public virtual void PrintCommands()
     {

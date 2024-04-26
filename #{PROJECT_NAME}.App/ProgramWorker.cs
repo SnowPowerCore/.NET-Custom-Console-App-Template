@@ -8,7 +8,7 @@ public class ProgramWorker(IHostApplicationLifetime lifetime,
 {
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
     {
-        if (!await WaitForAppStartup(lifetime, stoppingToken))
+        if (!await WaitForAppStartupAsync(lifetime, stoppingToken))
         {
             return;
         }
@@ -16,7 +16,7 @@ public class ProgramWorker(IHostApplicationLifetime lifetime,
         _ = Task.Run(applicationInit.InitAsync, stoppingToken);
     }
 
-    private static async Task<bool> WaitForAppStartup(IHostApplicationLifetime lifetime, CancellationToken stoppingToken)
+    private static async Task<bool> WaitForAppStartupAsync(IHostApplicationLifetime lifetime, CancellationToken stoppingToken)
     {
         var startedSource = new TaskCompletionSource();
         var cancelledSource = new TaskCompletionSource();

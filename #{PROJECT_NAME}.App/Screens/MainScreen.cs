@@ -13,12 +13,12 @@ public class MainScreen : ScreenBase
         _sampleBusinessLogic = sampleBusinessLogic;
 
         Commands.Add("q", new(ExitAsync, "Exits the app."));
-        Commands.Add("sample",
-            new(ExecuteSampleLogicAsync, "Executes sample business logic that is split in steps."));
     }
 
-    private async Task ExecuteSampleLogicAsync()
+    protected override async Task InitAsync()
     {
+        await base.InitAsync();
+
         var result = await _sampleBusinessLogic.ExecuteStepifiedSampleBusinessLogicAsync();
         if (result)
         {

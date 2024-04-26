@@ -15,8 +15,9 @@ public class SampleInterceptHttpClientWithHeaderStep : IStep<LaunchDelegate, Lau
 
     public Task InvokeAsync(LaunchContext context, LaunchDelegate next) => next(context);
 
-    private async Task HttpClientBeforeSendAsync(object sender, HttpClientInterceptorEventArgs e)
+    private Task HttpClientBeforeSendAsync(object sender, HttpClientInterceptorEventArgs e)
     {
         e.Request.Headers.Add("X-Test", "test");
+        return Task.CompletedTask;
     }
 }
